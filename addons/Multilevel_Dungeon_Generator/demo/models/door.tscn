@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvv0jylmk25w3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l0332"]
+size = Vector3(0.5, 3, 1.12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0332"]
+albedo_color = Color(0, 0.6133095, 0.13981947, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e2wb1"]
+size = Vector3(0.5, 1, 4)
+
+[node name="door" type="Node3D" unique_id=860464091]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=949272478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1.45)
+mesh = SubResource("BoxMesh_l0332")
+surface_material_override/0 = SubResource("StandardMaterial3D_l0332")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=594228159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.490096, 0)
+mesh = SubResource("BoxMesh_e2wb1")
+surface_material_override/0 = SubResource("StandardMaterial3D_l0332")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=900678633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.45)
+mesh = SubResource("BoxMesh_l0332")
+surface_material_override/0 = SubResource("StandardMaterial3D_l0332")

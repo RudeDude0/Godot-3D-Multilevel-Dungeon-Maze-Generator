@@ -1,0 +1,2133 @@
+[gd_scene format=3 uid="uid://y4cy5eifeo3i"]
+
+[ext_resource type="Script" uid="uid://bkf7ey6x7omj7" path="res://addons/Multilevel_Dungeon_Generator/multilevel_dungeon_generator.gd" id="1_q4gt0"]
+[ext_resource type="PackedScene" uid="uid://c55k54hcy5ms1" path="res://addons/Multilevel_Dungeon_Generator/demo/models/floor.tscn" id="2_ypsjk"]
+[ext_resource type="PackedScene" uid="uid://c8fs4jahvnisc" path="res://addons/Multilevel_Dungeon_Generator/demo/models/wall.tscn" id="3_amt22"]
+[ext_resource type="PackedScene" uid="uid://dvv0jylmk25w3" path="res://addons/Multilevel_Dungeon_Generator/demo/models/door.tscn" id="4_xjjfa"]
+[ext_resource type="PackedScene" uid="uid://dxbs4f8n73vqv" path="res://addons/Multilevel_Dungeon_Generator/demo/models/stairs.tscn" id="5_7p6x2"]
+[ext_resource type="PackedScene" uid="uid://c2tth5r1bq2gi" path="res://addons/Multilevel_Dungeon_Generator/demo/models/pillar.tscn" id="5_ypsjk"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_q4gt0"]
+agent_radius = 0.6
+agent_max_climb = 0.35
+agent_max_slope = 50.0
+
+[node name="Node3D" type="Node3D" unique_id=933004748]
+
+[node name="DungeonGenerator" type="NavigationRegion3D" parent="." unique_id=709189735]
+navigation_mesh = SubResource("NavigationMesh_q4gt0")
+script = ExtResource("1_q4gt0")
+floor_scene = ExtResource("2_ypsjk")
+wall_solid = ExtResource("3_amt22")
+wall_window = ExtResource("3_amt22")
+wall_jail = ExtResource("3_amt22")
+wall_doorway = ExtResource("4_xjjfa")
+pillar_round_scene = ExtResource("5_ypsjk")
+grid_width = 25
+grid_height = 25
+use_fixed_seed = true
+seed_value = 999999999
+num_rooms = 25
+room_min_size = Vector2i(2, 2)
+room_max_size = Vector2i(3, 3)
+room_padding = 0
+alcove_chance = 0.5
+spawn_torches = false
+spawn_chests = false
+spawn_debris = false
+level_height = 3.0
+stairs_scene = ExtResource("5_7p6x2")
+floor_offset = Vector3(0, 0, 0)
+
+[node name="Level_0" type="Node3D" parent="DungeonGenerator" unique_id=67567216]
+
+[node name="Floor" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=839854960 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 4)
+
+[node name="Wall" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=500763770 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 2)
+
+[node name="@Node3D@48406" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1778052150 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 4)
+
+[node name="@Node3D@48407" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=229785919 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 4)
+
+[node name="@Node3D@48408" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1657901927 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 32, 0, 2)
+
+[node name="@Node3D@48409" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=307601912 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 4)
+
+[node name="@Node3D@48410" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=785654429 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 4)
+
+[node name="@Node3D@48411" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1813130103 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 52, 0, 2)
+
+[node name="@Node3D@48412" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1792930308 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 50, 0, 4)
+
+[node name="@Node3D@48413" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1751235056 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 4)
+
+[node name="@Node3D@48414" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1968279283 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 56, 0, 2)
+
+[node name="@Node3D@48415" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1142060234 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 4)
+
+[node name="@Node3D@48416" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1760115691 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 60, 0, 2)
+
+[node name="@Node3D@48417" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1206525694 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 4)
+
+[node name="@Node3D@48418" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2101036239 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 64, 0, 2)
+
+[node name="@Node3D@48419" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1387408233 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 4)
+
+[node name="@Node3D@48420" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=367541759 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 68, 0, 2)
+
+[node name="@Node3D@48421" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1047199584 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 4)
+
+[node name="@Node3D@48422" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=493023609 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 8)
+
+[node name="@Node3D@48423" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1685137481 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 24, 0, 6)
+
+[node name="@Node3D@48424" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1318999057 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 8)
+
+[node name="@Node3D@48425" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=35609347 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 8)
+
+[node name="Doorway" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=860464091 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 8)
+
+[node name="@Node3D@48426" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1704929532 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 8)
+
+[node name="@Node3D@48427" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=302597745 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 8)
+
+[node name="@Node3D@48428" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=508086876 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 8)
+
+[node name="@Node3D@48429" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=535238835 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 50, 0, 8)
+
+[node name="@Node3D@48430" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1677216606 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 8)
+
+[node name="@Node3D@48431" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2016814017 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 8)
+
+[node name="@Node3D@48432" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1707576099 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 8)
+
+[node name="@Node3D@48433" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1815573393 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 8)
+
+[node name="@Node3D@48434" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=817316954 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68, 0, 10)
+
+[node name="@Node3D@48435" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1726382994 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 8)
+
+[node name="@Node3D@48436" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=583513751 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+
+[node name="@Node3D@48437" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=752287381 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4, 0, 10)
+
+[node name="@Node3D@48438" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1603635704 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 12)
+
+[node name="@Node3D@48439" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1112402326 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+
+[node name="@Node3D@48440" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1466614070 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8, 0, 10)
+
+[node name="@Node3D@48441" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=951134661 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
+
+[node name="@Node3D@48442" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=874370398 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 12, 0, 10)
+
+[node name="@Node3D@48443" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1841687056 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 12)
+
+[node name="@Node3D@48444" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1673180307 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 16, 0, 10)
+
+[node name="@Node3D@48445" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1918216319 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 12)
+
+[node name="@Node3D@48446" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2136647492 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 20, 0, 10)
+
+[node name="@Node3D@48447" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1168280771 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22, 0, 12)
+
+[node name="@Node3D@48448" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1386314314 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 12)
+
+[node name="@Node3D@48449" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1762039199 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 12)
+
+[node name="@Node3D@48450" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1859106666 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 14)
+
+[node name="@Node3D@48451" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=8370977 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 12)
+
+[node name="@Node3D@48452" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2135608274 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 12)
+
+[node name="@Node3D@48453" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=747307911 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32, 0, 14)
+
+[node name="@Node3D@48454" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2122497086 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 12)
+
+[node name="@Node3D@48455" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1383465885 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 12)
+
+[node name="@Node3D@48456" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1540467971 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52, 0, 14)
+
+[node name="@Node3D@48457" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1668330110 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 50, 0, 12)
+
+[node name="@Node3D@48458" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=740558072 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 12)
+
+[node name="@Node3D@48459" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1617354332 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56, 0, 14)
+
+[node name="@Node3D@48460" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=19242337 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 12)
+
+[node name="@Node3D@48461" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1659269899 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60, 0, 14)
+
+[node name="@Node3D@48462" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=118403961 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 12)
+
+[node name="@Node3D@48463" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=814525712 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64, 0, 14)
+
+[node name="@Node3D@48464" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=795429925 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66, 0, 12)
+
+[node name="@Node3D@48465" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1011459603 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 12)
+
+[node name="@Node3D@48466" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1611703114 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 84, 0, 10)
+
+[node name="@Node3D@48467" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=584147032 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 82, 0, 12)
+
+[node name="@Node3D@48468" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1462440427 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 12)
+
+[node name="@Node3D@48469" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=472971337 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 88, 0, 10)
+
+[node name="@Node3D@48470" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1383243482 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0, 12)
+
+[node name="@Node3D@48471" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=32295390 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
+
+[node name="@Node3D@48472" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2004364646 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 16)
+
+[node name="@Node3D@48473" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1063981591 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
+
+[node name="@Node3D@48474" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1238293281 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
+
+[node name="@Node3D@48475" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=46896823 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="@Node3D@48476" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1778060997 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 16)
+
+[node name="@Node3D@48477" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1482204974 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22, 0, 16)
+
+[node name="@Node3D@48478" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=196187123 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 16)
+
+[node name="@Node3D@48479" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1076402893 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 16)
+
+[node name="@Node3D@48480" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=206531353 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 16)
+
+[node name="@Node3D@48481" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1412413139 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 16)
+
+[node name="@Node3D@48482" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=710925942 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 30, 0, 16)
+
+[node name="@Node3D@48483" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1565669253 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 16)
+
+[node name="@Node3D@48484" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1164507263 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 40, 0, 14)
+
+[node name="@Node3D@48485" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1466481077 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 38, 0, 16)
+
+[node name="@Node3D@48486" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=521527107 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 16)
+
+[node name="@Node3D@48487" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1262587660 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 44, 0, 14)
+
+[node name="@Node3D@48488" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1463675011 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46, 0, 16)
+
+[node name="@Node3D@48489" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=79662356 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 16)
+
+[node name="@Node3D@48490" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1800994647 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66, 0, 16)
+
+[node name="@Node3D@48491" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1748654301 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 62, 0, 16)
+
+[node name="@Node3D@48492" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1470760913 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 16)
+
+[node name="@Node3D@48493" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=67738715 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 72, 0, 14)
+
+[node name="@Node3D@48494" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=511453656 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 70, 0, 16)
+
+[node name="@Node3D@48495" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2037267353 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 16)
+
+[node name="@Node3D@48496" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=145923329 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 78, 0, 16)
+
+[node name="@Node3D@48497" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2063441106 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 76, 0, 14)
+
+[node name="@Node3D@48498" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1621396175 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 16)
+
+[node name="@Node3D@48499" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=830868992 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 80, 0, 14)
+
+[node name="@Node3D@48500" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=283600329 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 16)
+
+[node name="@Node3D@48501" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1250759515 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 82, 0, 16)
+
+[node name="@Node3D@48502" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=483750493 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 16)
+
+[node name="@Node3D@48503" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1783937928 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, 0, 16)
+
+[node name="@Node3D@48504" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1547129943 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 92, 0, 14)
+
+[node name="@Node3D@48505" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1651599827 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 94, 0, 16)
+
+[node name="@Node3D@48506" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1536735036 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 20)
+
+[node name="@Node3D@48507" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1195838488 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 20)
+
+[node name="@Node3D@48508" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=69503840 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 20)
+
+[node name="@Node3D@48509" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=412035052 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 20)
+
+[node name="@Node3D@48510" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1135218000 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 20)
+
+[node name="@Node3D@48511" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1513556849 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 22)
+
+[node name="@Node3D@48512" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=37498029 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 20)
+
+[node name="@Node3D@48513" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=317562562 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 20)
+
+[node name="@Node3D@48514" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2092556390 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 24, 0, 18)
+
+[node name="@Node3D@48515" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1737427985 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 20)
+
+[node name="@Node3D@48516" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1424129486 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 18)
+
+[node name="@Node3D@48517" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=623257919 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 30, 0, 20)
+
+[node name="@Node3D@48518" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=919507247 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 20)
+
+[node name="@Node3D@48519" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2056665060 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 20)
+
+[node name="@Node3D@48520" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1112159122 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 36, 0, 18)
+
+[node name="@Node3D@48521" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=495714871 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 20)
+
+[node name="@Node3D@48522" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=457887383 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 20)
+
+[node name="@Node3D@48523" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=72093860 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46, 0, 20)
+
+[node name="@Node3D@48524" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1784842685 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 20)
+
+[node name="@Node3D@48525" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1409006916 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 62, 0, 20)
+
+[node name="@Node3D@48526" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1937062713 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 20)
+
+[node name="@Node3D@48527" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1159711370 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 68, 0, 18)
+
+[node name="@Node3D@48528" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1178905367 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 20)
+
+[node name="@Node3D@48529" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2089010764 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 20)
+
+[node name="@Node3D@48530" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1203176301 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 20)
+
+[node name="@Node3D@48531" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=262624312 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 20)
+
+[node name="@Node3D@48532" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1513515621 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 80, 0, 18)
+
+[node name="@Node3D@48533" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1499631877 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 20)
+
+[node name="@Node3D@48534" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=666102522 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 20)
+
+[node name="@Node3D@48535" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1367591971 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 88, 0, 22)
+
+[node name="@Node3D@48536" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=702230696 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, 0, 20)
+
+[node name="@Node3D@48537" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1296507920 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 92, 0, 22)
+
+[node name="@Node3D@48538" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1809234432 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 94, 0, 20)
+
+[node name="@Node3D@48539" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=68808176 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 24)
+
+[node name="@Node3D@48540" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=448207091 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 24)
+
+[node name="@Node3D@48541" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=66877081 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 24)
+
+[node name="@Node3D@48542" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=954960382 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 24)
+
+[node name="@Node3D@48543" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=845981661 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 24)
+
+[node name="@Node3D@48544" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1206901761 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 24)
+
+[node name="@Node3D@48545" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=141523527 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 26)
+
+[node name="@Node3D@48546" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=92158122 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 24)
+
+[node name="@Node3D@48547" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1791539670 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 26)
+
+[node name="@Node3D@48548" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=275490632 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 24)
+
+[node name="@Node3D@48549" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2032640111 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 24)
+
+[node name="@Node3D@48550" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=494814391 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, 26)
+
+[node name="@Node3D@48551" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1194431926 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 24)
+
+[node name="@Node3D@48552" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=458384038 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 30, 0, 24)
+
+[node name="@Node3D@48553" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1916940059 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 26)
+
+[node name="@Node3D@48554" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=103058614 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 24)
+
+[node name="@Node3D@48555" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=405494144 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 24)
+
+[node name="@Node3D@48556" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1300089722 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, 26)
+
+[node name="@Node3D@48557" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2073844573 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 24)
+
+[node name="@Node3D@48558" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=803903205 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40, 0, 26)
+
+[node name="@Node3D@48559" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2033837534 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 24)
+
+[node name="@Node3D@48560" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=415080686 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44, 0, 26)
+
+[node name="@Node3D@48561" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=634073997 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 24)
+
+[node name="@Node3D@48562" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=304695887 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 48, 0, 22)
+
+[node name="@Node3D@48563" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1173965222 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 26)
+
+[node name="@Node3D@48564" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=870919449 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 24)
+
+[node name="@Node3D@48565" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1850972917 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 52, 0, 22)
+
+[node name="@Node3D@48566" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1719018239 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52, 0, 26)
+
+[node name="@Node3D@48567" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=970869684 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 24)
+
+[node name="@Node3D@48568" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=398397698 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 56, 0, 22)
+
+[node name="@Node3D@48569" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=729324440 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56, 0, 26)
+
+[node name="@Node3D@48570" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1724161498 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 24)
+
+[node name="@Node3D@48571" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1774065288 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 60, 0, 22)
+
+[node name="@Node3D@48572" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1434125895 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60, 0, 26)
+
+[node name="@Node3D@48573" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=912282251 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 24)
+
+[node name="@Node3D@48574" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=833588546 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64, 0, 26)
+
+[node name="@Node3D@48575" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1893161265 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 24)
+
+[node name="@Node3D@48576" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2080823622 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 24)
+
+[node name="@Node3D@48577" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2051943410 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 24)
+
+[node name="@Node3D@48578" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1362543976 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 24)
+
+[node name="@Node3D@48579" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1686078444 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 76, 0, 26)
+
+[node name="@Node3D@48580" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=500167315 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 24)
+
+[node name="@Node3D@48581" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1391854917 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 0, 26)
+
+[node name="@Node3D@48582" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1332453384 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 24)
+
+[node name="@Node3D@48583" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1367372085 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 84, 0, 26)
+
+[node name="@Node3D@48584" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=328479892 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 86, 0, 24)
+
+[node name="@Node3D@48585" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=191472346 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 28)
+
+[node name="@Node3D@48586" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=383702879 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 30)
+
+[node name="@Node3D@48587" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=492367341 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 28)
+
+[node name="@Node3D@48588" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1932351852 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 28)
+
+[node name="@Node3D@48589" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=108207352 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, 30)
+
+[node name="@Node3D@48590" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=737778275 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 28)
+
+[node name="@Node3D@48591" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=372670631 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 0, 30)
+
+[node name="@Node3D@48592" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1683315499 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 28)
+
+[node name="@Node3D@48593" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1244856801 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 28)
+
+[node name="@Node3D@48594" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1759372606 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 28)
+
+[node name="@Node3D@48595" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1486299318 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 28)
+
+[node name="@Node3D@48596" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=320826463 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 28)
+
+[node name="@Node3D@48597" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=801207727 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 28)
+
+[node name="@Node3D@48598" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=667249314 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 30, 0, 28)
+
+[node name="@Node3D@48599" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=104752518 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 28)
+
+[node name="@Node3D@48600" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1023867239 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68, 0, 30)
+
+[node name="@Node3D@48601" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1867183612 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 28)
+
+[node name="@Node3D@48602" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1911338456 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 28)
+
+[node name="@Node3D@48603" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=427290325 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 72, 0, 30)
+
+[node name="@Node3D@48604" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=716314135 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 28)
+
+[node name="@Node3D@48605" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1201642795 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 28)
+
+[node name="@Node3D@48606" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1834026600 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 28)
+
+[node name="@Node3D@48607" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1573819705 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 28)
+
+[node name="@Node3D@48608" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1877605200 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 32)
+
+[node name="@Node3D@48609" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1032538325 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 32)
+
+[node name="@Node3D@48610" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=246127762 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 32)
+
+[node name="@Node3D@48611" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2006791691 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 32)
+
+[node name="@Node3D@48612" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=673115315 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 32)
+
+[node name="@Node3D@48613" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1045690758 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 30, 0, 32)
+
+[node name="@Node3D@48614" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=266728575 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 32)
+
+[node name="@Node3D@48615" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1653543790 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 32)
+
+[node name="@Node3D@48616" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=784622807 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 32)
+
+[node name="@Node3D@48617" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=166317431 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 36)
+
+[node name="@Node3D@48618" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1156509851 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 20, 0, 34)
+
+[node name="@Node3D@48619" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2116263282 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 36)
+
+[node name="@Node3D@48620" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=206393982 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 36)
+
+[node name="@Node3D@48621" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2024750904 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 24, 0, 34)
+
+[node name="@Node3D@48622" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=165947837 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 36)
+
+[node name="@Node3D@48623" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1395359055 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 36)
+
+[node name="@Node3D@48624" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=235387817 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 36)
+
+[node name="@Node3D@48625" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1721444633 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 30, 0, 36)
+
+[node name="@Node3D@48626" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=83426661 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 36)
+
+[node name="@Node3D@48627" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=948717295 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 60, 0, 34)
+
+[node name="@Node3D@48628" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=261195154 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 36)
+
+[node name="@Node3D@48629" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1270583871 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 36)
+
+[node name="@Node3D@48630" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=824803425 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 64, 0, 34)
+
+[node name="@Node3D@48631" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=212690208 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 36)
+
+[node name="@Node3D@48632" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=483369466 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 68, 0, 34)
+
+[node name="@Node3D@48633" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1452987942 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 36)
+
+[node name="@Node3D@48634" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=859459835 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 36)
+
+[node name="@Node3D@48635" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=144050001 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 76, 0, 34)
+
+[node name="@Node3D@48636" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=947056591 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 74, 0, 36)
+
+[node name="@Node3D@48637" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1192724635 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 36)
+
+[node name="@Node3D@48638" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=952923888 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 80, 0, 34)
+
+[node name="@Node3D@48639" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=196943352 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 36)
+
+[node name="@Node3D@48640" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2104240081 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 40)
+
+[node name="@Node3D@48641" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1669897238 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 40)
+
+[node name="@Node3D@48642" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=764627486 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 40)
+
+[node name="@Node3D@48643" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=515670711 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 40)
+
+[node name="@Node3D@48644" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1417798621 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 40)
+
+[node name="@Node3D@48645" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1330917633 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 38)
+
+[node name="@Node3D@48646" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=734767412 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 42)
+
+[node name="@Node3D@48647" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1783304906 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 40)
+
+[node name="@Node3D@48648" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2060934807 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32, 0, 42)
+
+[node name="@Node3D@48649" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1188777349 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 40)
+
+[node name="@Node3D@48650" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1131021132 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 40)
+
+[node name="@Node3D@48651" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=558924752 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 56, 0, 38)
+
+[node name="@Node3D@48652" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1693086266 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 54, 0, 40)
+
+[node name="@Node3D@48653" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1643739817 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 40)
+
+[node name="@Node3D@48654" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1938209067 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 40)
+
+[node name="@Node3D@48655" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1217328253 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 40)
+
+[node name="@Node3D@48656" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=574622507 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 40)
+
+[node name="@Node3D@48657" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=273240567 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 40)
+
+[node name="@Node3D@48658" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1648761433 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 40)
+
+[node name="@Node3D@48659" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1277206340 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 72, 0, 38)
+
+[node name="@Node3D@48660" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=731223414 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 40)
+
+[node name="@Node3D@48661" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=204624810 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 76, 0, 42)
+
+[node name="@Node3D@48662" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=76518201 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 74, 0, 40)
+
+[node name="@Node3D@48663" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1768962476 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 40)
+
+[node name="@Node3D@48664" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1987398484 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 40)
+
+[node name="@Node3D@48665" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=647008613 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 84, 0, 38)
+
+[node name="@Node3D@48666" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=510938630 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 40)
+
+[node name="@Node3D@48667" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1865152925 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 88, 0, 38)
+
+[node name="@Node3D@48668" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=883425867 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0, 40)
+
+[node name="@Node3D@48669" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1998566736 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 44)
+
+[node name="@Node3D@48670" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=913396650 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 44)
+
+[node name="@Node3D@48671" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=149268439 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 44)
+
+[node name="@Node3D@48672" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1859831148 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 44)
+
+[node name="@Node3D@48673" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=747052777 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 44)
+
+[node name="@Node3D@48674" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1590888773 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 36, 0, 42)
+
+[node name="@Node3D@48675" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1442765506 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 34, 0, 44)
+
+[node name="@Node3D@48676" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1707255797 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 44)
+
+[node name="@Node3D@48677" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1113455730 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 40, 0, 42)
+
+[node name="@Node3D@48678" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=960596242 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 44)
+
+[node name="@Node3D@48679" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1712677350 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 44, 0, 42)
+
+[node name="@Node3D@48680" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=553061140 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46, 0, 44)
+
+[node name="@Node3D@48681" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1086315538 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 44)
+
+[node name="@Node3D@48682" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=130328799 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 54, 0, 44)
+
+[node name="@Node3D@48683" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=802457938 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 44)
+
+[node name="@Node3D@48684" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=538954282 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 44)
+
+[node name="@Node3D@48685" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1278099527 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60, 0, 46)
+
+[node name="@Node3D@48686" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1263357438 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 44)
+
+[node name="@Node3D@48687" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1061685656 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64, 0, 46)
+
+[node name="@Node3D@48688" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=513792260 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 44)
+
+[node name="@Node3D@48689" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=711002559 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 44)
+
+[node name="@Node3D@48690" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=467529627 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 72, 0, 42)
+
+[node name="@Node3D@48691" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1291100355 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 44)
+
+[node name="@Node3D@48692" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1042810332 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 44)
+
+[node name="@Node3D@48693" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=720477681 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 44)
+
+[node name="@Node3D@48694" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1231478522 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 44)
+
+[node name="@Node3D@48695" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1387709314 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 44)
+
+[node name="@Node3D@48696" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1029729622 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0, 44)
+
+[node name="@Node3D@48697" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1498614018 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 48)
+
+[node name="@Node3D@48698" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=12513789 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 48)
+
+[node name="@Node3D@48699" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=339215556 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 48)
+
+[node name="@Node3D@48700" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1890849307 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 48)
+
+[node name="@Node3D@48701" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1160258707 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 48)
+
+[node name="@Node3D@48702" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=608256069 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 46)
+
+[node name="@Node3D@48703" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1315370390 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 50)
+
+[node name="@Node3D@48704" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1417044495 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 48)
+
+[node name="@Node3D@48705" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=520899530 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 32, 0, 46)
+
+[node name="@Node3D@48706" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=378108869 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32, 0, 50)
+
+[node name="@Node3D@48707" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=398387450 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 48)
+
+[node name="@Node3D@48708" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1329966291 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, 50)
+
+[node name="@Node3D@48709" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1272982079 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 34, 0, 48)
+
+[node name="@Node3D@48710" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1432787041 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 48)
+
+[node name="@Node3D@48711" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=343951420 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40, 0, 50)
+
+[node name="@Node3D@48712" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2081977288 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 48)
+
+[node name="@Node3D@48713" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=113567998 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 46, 0, 48)
+
+[node name="@Node3D@48714" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=717123567 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44, 0, 50)
+
+[node name="@Node3D@48715" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1847548436 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 48)
+
+[node name="@Node3D@48716" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=507335685 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 48, 0, 46)
+
+[node name="@Node3D@48717" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2067413927 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 50)
+
+[node name="@Node3D@48718" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=915808045 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 48)
+
+[node name="@Node3D@48719" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=330795391 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 52, 0, 46)
+
+[node name="@Node3D@48720" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=506364007 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 48)
+
+[node name="@Node3D@48721" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=941037128 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 58, 0, 48)
+
+[node name="@Node3D@48722" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1734509125 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 48)
+
+[node name="@Node3D@48723" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1829730113 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 48)
+
+[node name="@Node3D@48724" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=997339446 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 48)
+
+[node name="@Node3D@48725" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=391190471 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 48)
+
+[node name="@Node3D@48726" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1611241447 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 48)
+
+[node name="@Node3D@48727" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1105909003 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 0, 50)
+
+[node name="@Node3D@48728" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=151665917 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 48)
+
+[node name="@Node3D@48729" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=125098312 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 48)
+
+[node name="@Node3D@48730" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=189176870 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 84, 0, 50)
+
+[node name="@Node3D@48731" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1163742146 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 48)
+
+[node name="@Node3D@48732" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1801816748 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 88, 0, 50)
+
+[node name="@Node3D@48733" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1746643094 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0, 48)
+
+[node name="@Node3D@48734" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=696774473 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 52)
+
+[node name="@Node3D@48735" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=971574649 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 54)
+
+[node name="@Node3D@48736" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1172030376 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 52)
+
+[node name="@Node3D@48737" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1592043792 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 52)
+
+[node name="@Node3D@48738" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1470348667 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, 54)
+
+[node name="@Node3D@48739" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1767112691 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 52)
+
+[node name="@Node3D@48740" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=706956214 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 52)
+
+[node name="@Node3D@48741" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=292052676 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 52, 0, 50)
+
+[node name="@Node3D@48742" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1425877795 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 50, 0, 52)
+
+[node name="@Node3D@48743" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=920096410 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 52)
+
+[node name="@Node3D@48744" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=467667684 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 56, 0, 50)
+
+[node name="@Node3D@48745" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1701645358 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 52)
+
+[node name="@Node3D@48746" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=428842095 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 60, 0, 50)
+
+[node name="@Node3D@48747" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=784945255 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 62, 0, 52)
+
+[node name="@Node3D@48748" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=733720256 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 52)
+
+[node name="@Node3D@48749" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1450740309 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68, 0, 54)
+
+[node name="@Node3D@48750" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=151370609 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 52)
+
+[node name="@Node3D@48751" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=304173216 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 52)
+
+[node name="@Node3D@48752" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=933227661 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 72, 0, 54)
+
+[node name="@Node3D@48753" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1961817547 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 52)
+
+[node name="@Node3D@48754" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1495981593 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 52)
+
+[node name="@Node3D@48755" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1009820721 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 52)
+
+[node name="@Node3D@48756" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=813927383 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 52)
+
+[node name="@Node3D@48757" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1824439734 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 56)
+
+[node name="@Node3D@48758" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=978341449 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26, 0, 56)
+
+[node name="@Node3D@48759" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=455987648 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 56)
+
+[node name="@Node3D@48760" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1858005840 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 56)
+
+[node name="@Node3D@48761" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=692487197 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52, 0, 58)
+
+[node name="@Node3D@48762" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=192075917 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 50, 0, 56)
+
+[node name="@Node3D@48763" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=877498608 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 56)
+
+[node name="@Node3D@48764" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1578860185 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 56)
+
+[node name="@Node3D@48765" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=826004611 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 62, 0, 56)
+
+[node name="@Node3D@48766" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=809017595 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 56)
+
+[node name="@Node3D@48767" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=473456095 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 56)
+
+[node name="@Node3D@48768" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1867717879 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 56)
+
+[node name="@Node3D@48769" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2031468745 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 60)
+
+[node name="@Node3D@48770" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=715585832 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 60)
+
+[node name="@Node3D@48771" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1306765147 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 60)
+
+[node name="@Node3D@48772" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=529344642 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 58)
+
+[node name="@Node3D@48773" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1015651335 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 60)
+
+[node name="@Node3D@48774" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1682486553 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 60)
+
+[node name="@Node3D@48775" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1903078923 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 32, 0, 58)
+
+[node name="@Node3D@48776" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1390381904 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 60)
+
+[node name="@Node3D@48777" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1579519069 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 36, 0, 58)
+
+[node name="@Node3D@48778" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2001189197 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 38, 0, 60)
+
+[node name="@Node3D@48779" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=844794748 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 60)
+
+[node name="@Node3D@48780" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=686925192 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 54, 0, 60)
+
+[node name="@Node3D@48781" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1550133690 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 60)
+
+[node name="@Node3D@48782" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=179919796 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 60)
+
+[node name="@Node3D@48783" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=353877334 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 64, 0, 58)
+
+[node name="@Node3D@48784" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1121095087 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 66, 0, 60)
+
+[node name="@Node3D@48785" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=918515400 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 60)
+
+[node name="@Node3D@48786" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2108928168 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 60)
+
+[node name="@Node3D@48787" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=940693298 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 60)
+
+[node name="@Node3D@48788" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1573077460 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 64)
+
+[node name="@Node3D@48789" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1426828885 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, 66)
+
+[node name="@Node3D@48790" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1257726763 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 22, 0, 64)
+
+[node name="@Node3D@48791" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=518364587 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 64)
+
+[node name="@Node3D@48792" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2119016775 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 64)
+
+[node name="@Node3D@48793" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1995745566 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 64)
+
+[node name="@Node3D@48794" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2139707427 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 64)
+
+[node name="@Node3D@48795" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1207877531 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 38, 0, 64)
+
+[node name="@Node3D@48796" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1589047227 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 64)
+
+[node name="@Node3D@48797" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=830817772 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56, 0, 66)
+
+[node name="@Node3D@48798" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=22120607 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 54, 0, 64)
+
+[node name="@Node3D@48799" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1697007807 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 64)
+
+[node name="@Node3D@48800" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=640792448 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60, 0, 66)
+
+[node name="@Node3D@48801" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1844164853 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 64)
+
+[node name="@Node3D@48802" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1856368730 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 64)
+
+[node name="@Node3D@48803" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1340878588 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 68, 0, 62)
+
+[node name="@Node3D@48804" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=835487381 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 64)
+
+[node name="@Node3D@48805" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1719810530 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 72, 0, 62)
+
+[node name="@Node3D@48806" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=79800136 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 64)
+
+[node name="@Node3D@48807" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1211252000 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 64)
+
+[node name="@Node3D@48808" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=249650102 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 64)
+
+[node name="@Node3D@48809" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=20754675 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 64)
+
+[node name="@Node3D@48810" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=178662556 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 68)
+
+[node name="@Node3D@48811" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1237088439 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 70)
+
+[node name="@Node3D@48812" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1040577251 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 68)
+
+[node name="@Node3D@48813" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=223867006 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 68)
+
+[node name="@Node3D@48814" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1919320368 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32, 0, 70)
+
+[node name="@Node3D@48815" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=836310196 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 68)
+
+[node name="@Node3D@48816" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=540922568 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, 70)
+
+[node name="@Node3D@48817" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=639313143 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 38, 0, 68)
+
+[node name="@Node3D@48818" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=647131663 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 68)
+
+[node name="@Node3D@48819" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2007875784 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 62, 0, 68)
+
+[node name="@Node3D@48820" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=644547297 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 68)
+
+[node name="@Node3D@48821" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=746008867 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 68)
+
+[node name="@Node3D@48822" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1431990101 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 68)
+
+[node name="@Node3D@48823" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1010532805 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 68)
+
+[node name="@Node3D@48824" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1125079112 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 68)
+
+[node name="@Node3D@48825" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2091985259 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 68)
+
+[node name="@Node3D@48826" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=231147594 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 72)
+
+[node name="@Node3D@48827" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=922978888 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 72)
+
+[node name="@Node3D@48828" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=926083926 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 30, 0, 72)
+
+[node name="@Node3D@48829" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=22123250 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 72)
+
+[node name="@Node3D@48830" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2073579506 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64, 0, 74)
+
+[node name="@Node3D@48831" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1334099772 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 62, 0, 72)
+
+[node name="@Node3D@48832" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=194527695 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 72)
+
+[node name="@Node3D@48833" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=432318227 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 72)
+
+[node name="@Node3D@48834" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=41716543 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 72)
+
+[node name="@Node3D@48835" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1799110915 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 72)
+
+[node name="@Node3D@48836" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=745397095 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 72)
+
+[node name="@Node3D@48837" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1941814361 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 72)
+
+[node name="@Node3D@48838" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1550006493 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 76)
+
+[node name="@Node3D@48839" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1308514348 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 20, 0, 74)
+
+[node name="@Node3D@48840" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=25420061 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 76)
+
+[node name="@Node3D@48841" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1802843833 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 76)
+
+[node name="@Node3D@48842" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2132934545 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 24, 0, 74)
+
+[node name="@Node3D@48843" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1933067004 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 76)
+
+[node name="@Node3D@48844" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=662189546 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28, 0, 74)
+
+[node name="@Node3D@48845" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1042636480 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 76)
+
+[node name="@Node3D@48846" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1122911872 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 32, 0, 74)
+
+[node name="@Node3D@48847" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2118187015 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 76)
+
+[node name="@Node3D@48848" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=38781607 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 36, 0, 74)
+
+[node name="@Node3D@48849" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1477991309 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 38, 0, 76)
+
+[node name="@Node3D@48850" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1621728398 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 76)
+
+[node name="@Node3D@48851" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=386020860 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 44, 0, 74)
+
+[node name="@Node3D@48852" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=967382629 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 42, 0, 76)
+
+[node name="@Node3D@48853" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=449000895 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 76)
+
+[node name="@Node3D@48854" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1454606209 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 48, 0, 74)
+
+[node name="@Node3D@48855" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1159199919 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 76)
+
+[node name="@Node3D@48856" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1143736698 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 52, 0, 74)
+
+[node name="@Node3D@48857" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1571888421 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 54, 0, 76)
+
+[node name="@Node3D@48858" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2080485494 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 76)
+
+[node name="@Node3D@48859" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2118972025 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68, 0, 78)
+
+[node name="@Node3D@48860" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=595879077 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 66, 0, 76)
+
+[node name="@Node3D@48861" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1379861416 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 76)
+
+[node name="@Node3D@48862" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=273628287 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 72, 0, 78)
+
+[node name="@Node3D@48863" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=243388346 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 74, 0, 76)
+
+[node name="@Node3D@48864" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=278338433 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 76)
+
+[node name="@Node3D@48865" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=182927776 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 76)
+
+[node name="@Node3D@48866" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2024074662 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 0, 76)
+
+[node name="@Node3D@48867" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1956274438 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 84, 0, 74)
+
+[node name="@Node3D@48868" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1871342239 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 84, 0, 78)
+
+[node name="@Node3D@48869" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1322106138 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88, 0, 76)
+
+[node name="@Node3D@48870" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1193433698 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 88, 0, 74)
+
+[node name="@Node3D@48871" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1153138216 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 88, 0, 78)
+
+[node name="@Node3D@48872" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1478622697 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0, 76)
+
+[node name="@Node3D@48873" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1592174854 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 80)
+
+[node name="@Node3D@48874" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=191992789 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 80)
+
+[node name="@Node3D@48875" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=801510762 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 80)
+
+[node name="@Node3D@48876" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1673698830 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 80)
+
+[node name="@Node3D@48877" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2414804 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 80)
+
+[node name="@Node3D@48878" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2055473747 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 80)
+
+[node name="@Node3D@48879" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=215296110 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 38, 0, 80)
+
+[node name="@Node3D@48880" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1213523352 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, 82)
+
+[node name="@Node3D@48881" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1761844373 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 80)
+
+[node name="@Node3D@48882" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1739907672 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 40, 0, 78)
+
+[node name="@Node3D@48883" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=186261883 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40, 0, 82)
+
+[node name="@Node3D@48884" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1447848558 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 80)
+
+[node name="@Node3D@48885" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=687886497 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 42, 0, 80)
+
+[node name="@Node3D@48886" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1949978605 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 80)
+
+[node name="@Node3D@48887" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1640934486 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 80)
+
+[node name="@Node3D@48888" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=529957426 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 54, 0, 80)
+
+[node name="@Node3D@48889" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=407050316 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 80)
+
+[node name="@Node3D@48890" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1231647943 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 80)
+
+[node name="@Node3D@48891" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=250801020 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 80)
+
+[node name="@Node3D@48892" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=644823529 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 84)
+
+[node name="@Node3D@48893" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1950625235 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4, 0, 82)
+
+[node name="@Node3D@48894" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1024299689 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 84)
+
+[node name="@Node3D@48895" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1279511201 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 84)
+
+[node name="@Node3D@48896" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1298122120 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 8, 0, 82)
+
+[node name="@Node3D@48897" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1058679510 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 84)
+
+[node name="@Node3D@48898" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1033999648 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 12, 0, 82)
+
+[node name="@Node3D@48899" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1526257756 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 84)
+
+[node name="@Node3D@48900" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1269781413 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 84)
+
+[node name="@Node3D@48901" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=255019365 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 86)
+
+[node name="@Node3D@48902" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=378643615 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 18, 0, 84)
+
+[node name="@Node3D@48903" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=682918995 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 84)
+
+[node name="@Node3D@48904" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=810576928 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, 86)
+
+[node name="@Node3D@48905" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=572150538 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 84)
+
+[node name="@Node3D@48906" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=374725010 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 84)
+
+[node name="@Node3D@48907" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1171590620 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 84)
+
+[node name="@Node3D@48908" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=286659849 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 84)
+
+[node name="@Node3D@48909" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=322460462 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44, 0, 86)
+
+[node name="@Node3D@48910" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=271353223 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 42, 0, 84)
+
+[node name="@Node3D@48911" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=5347037 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 84)
+
+[node name="@Node3D@48912" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1153821277 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 86)
+
+[node name="@Node3D@48913" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=450539284 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 84)
+
+[node name="@Node3D@48914" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=729154960 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52, 0, 86)
+
+[node name="@Node3D@48915" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1960682537 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 54, 0, 84)
+
+[node name="@Node3D@48916" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=793641279 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 84)
+
+[node name="@Node3D@48917" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1979331548 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 60, 0, 82)
+
+[node name="@Node3D@48918" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=157906289 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 84)
+
+[node name="@Node3D@48919" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1051045714 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 84)
+
+[node name="@Node3D@48920" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=278377404 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 64, 0, 82)
+
+[node name="@Node3D@48921" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2093244281 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 84)
+
+[node name="@Node3D@48922" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1116000366 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 68, 0, 82)
+
+[node name="@Node3D@48923" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=387654820 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 84)
+
+[node name="@Node3D@48924" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2144726160 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 84)
+
+[node name="@Node3D@48925" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=935799764 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 84)
+
+[node name="@Node3D@48926" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=425976784 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 78, 0, 84)
+
+[node name="@Node3D@48927" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=160449995 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 88)
+
+[node name="@Node3D@48928" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1624229168 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 90)
+
+[node name="@Node3D@48929" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1497854524 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2, 0, 88)
+
+[node name="@Node3D@48930" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=695821633 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 88)
+
+[node name="@Node3D@48931" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1008432598 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8, 0, 90)
+
+[node name="@Node3D@48932" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1408494756 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 88)
+
+[node name="@Node3D@48933" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1058470270 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12, 0, 90)
+
+[node name="@Node3D@48934" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1494623973 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, 88)
+
+[node name="@Node3D@48935" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=191852776 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 88)
+
+[node name="@Node3D@48936" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1938383783 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 16, 0, 86)
+
+[node name="@Node3D@48937" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=227787348 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 90)
+
+[node name="@Node3D@48938" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1224144708 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 88)
+
+[node name="@Node3D@48939" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1584696321 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, 90)
+
+[node name="@Node3D@48940" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1039003157 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 88)
+
+[node name="@Node3D@48941" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=790511139 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24, 0, 90)
+
+[node name="@Node3D@48942" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1379672542 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 88)
+
+[node name="@Node3D@48943" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=281339539 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 88)
+
+[node name="@Node3D@48944" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2062323741 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 88)
+
+[node name="@Node3D@48945" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=146365335 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 88)
+
+[node name="@Node3D@48946" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=715769701 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, 88)
+
+[node name="@Node3D@48947" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1827897224 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 36, 0, 86)
+
+[node name="@Node3D@48948" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=980782965 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 36, 0, 90)
+
+[node name="@Node3D@48949" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1446961001 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 88)
+
+[node name="@Node3D@48950" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1383119465 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 40, 0, 86)
+
+[node name="@Node3D@48951" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=415949998 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40, 0, 90)
+
+[node name="@Node3D@48952" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1528633184 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 88)
+
+[node name="@Node3D@48953" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1086763118 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44, 0, 90)
+
+[node name="@Node3D@48954" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1758896928 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0, 88)
+
+[node name="@Node3D@48955" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2144004418 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48, 0, 90)
+
+[node name="@Node3D@48956" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2132037863 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, 88)
+
+[node name="@Node3D@48957" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1597770493 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52, 0, 90)
+
+[node name="@Node3D@48958" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=349467543 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 88)
+
+[node name="@Node3D@48959" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=800960737 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 56, 0, 86)
+
+[node name="@Node3D@48960" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1246353799 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 56, 0, 90)
+
+[node name="@Node3D@48961" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=823949641 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 88)
+
+[node name="@Node3D@48962" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=702031577 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 88)
+
+[node name="@Node3D@48963" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1061630920 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 88)
+
+[node name="@Node3D@48964" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1608239994 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 88)
+
+[node name="@Node3D@48965" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=461171663 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 88)
+
+[node name="@Node3D@48966" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1093139465 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 72, 0, 86)
+
+[node name="@Node3D@48967" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=151959098 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 88)
+
+[node name="@Node3D@48968" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1981061792 instance=ExtResource("4_xjjfa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 78, 0, 88)
+
+[node name="@Node3D@48969" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1682195870 instance=ExtResource("3_amt22")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 76, 0, 86)
+
+[node name="@Node3D@48970" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=747093533 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 0, 88)
+
+[node name="@Node3D@48971" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1344105795 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 80, 0, 90)
+
+[node name="@Node3D@48972" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1648588895 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 82, 0, 88)
+
+[node name="@Node3D@48973" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=891818436 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, 92)
+
+[node name="@Node3D@48974" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=911266966 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0, 94)
+
+[node name="@Node3D@48975" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1241418638 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 26, 0, 92)
+
+[node name="@Node3D@48976" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=663173906 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 92)
+
+[node name="@Node3D@48977" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2002925355 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 32, 0, 94)
+
+[node name="@Node3D@48978" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1674864735 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34, 0, 92)
+
+[node name="@Node3D@48979" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1024299443 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 92)
+
+[node name="@Node3D@48980" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1080790744 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 92)
+
+[node name="@Node3D@48981" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1857967689 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 92)
+
+[node name="@Node3D@48982" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1319436561 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 92)
+
+[node name="@Node3D@48983" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1655976970 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72, 0, 92)
+
+[node name="@Node3D@48984" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2110104036 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 72, 0, 94)
+
+[node name="@Node3D@48985" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1445538704 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 92)
+
+[node name="@Node3D@48986" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=701254714 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 76, 0, 94)
+
+[node name="@Node3D@48987" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1719322495 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 78, 0, 92)
+
+[node name="@Node3D@48988" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=773764840 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 96)
+
+[node name="@Node3D@48989" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=210183905 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 60, 0, 98)
+
+[node name="@Node3D@48990" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1202119177 instance=ExtResource("3_amt22")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 58, 0, 96)
+
+[node name="@Node3D@48991" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1979427685 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, 96)
+
+[node name="@Node3D@48992" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=399635228 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64, 0, 98)
+
+[node name="@Node3D@48993" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1482326403 instance=ExtResource("2_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 96)
+
+[node name="@Node3D@48994" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1579414354 instance=ExtResource("3_amt22")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 68, 0, 98)
+
+[node name="@Node3D@48995" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=134101215 instance=ExtResource("3_amt22")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 70, 0, 96)
+
+[node name="Pillar" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1976482873 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 6)
+
+[node name="@Node3D@48996" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1301159221 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 6)
+
+[node name="@Node3D@48997" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1643327595 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 6)
+
+[node name="@Node3D@48998" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1227621618 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 6)
+
+[node name="@Node3D@48999" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1752883976 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 6)
+
+[node name="@Node3D@49000" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2146105265 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 10)
+
+[node name="@Node3D@49001" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2111507987 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 10)
+
+[node name="@Node3D@49002" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=776555388 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 10)
+
+[node name="@Node3D@49003" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=148547937 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 10)
+
+[node name="@Node3D@49004" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1987069154 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 10)
+
+[node name="@Node3D@49005" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=190785747 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
+
+[node name="@Node3D@49006" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1350286278 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+
+[node name="@Node3D@49007" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=582496794 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 14)
+
+[node name="@Node3D@49008" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1388399747 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
+
+[node name="@Node3D@49009" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2108910395 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 14)
+
+[node name="@Node3D@49010" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=191440532 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 0, 14)
+
+[node name="@Node3D@49011" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=246715649 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 18)
+
+[node name="@Node3D@49012" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=705030645 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 18)
+
+[node name="@Node3D@49013" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2092059272 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 18)
+
+[node name="@Node3D@49014" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1601712651 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 18)
+
+[node name="@Node3D@49015" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=534361926 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 18)
+
+[node name="@Node3D@49016" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1260683946 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 0, 18)
+
+[node name="@Node3D@49017" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1701475235 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 18)
+
+[node name="@Node3D@49018" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1748120981 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 0, 18)
+
+[node name="@Node3D@49019" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=387947271 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 0, 18)
+
+[node name="@Node3D@49020" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=295030558 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 0, 18)
+
+[node name="@Node3D@49021" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1636473381 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 22)
+
+[node name="@Node3D@49022" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1408314570 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 22)
+
+[node name="@Node3D@49023" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=56348115 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 22)
+
+[node name="@Node3D@49024" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2084500890 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 22)
+
+[node name="@Node3D@49025" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1462728381 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 22)
+
+[node name="@Node3D@49026" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1813742053 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 22)
+
+[node name="@Node3D@49027" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2078813922 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 22)
+
+[node name="@Node3D@49028" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=457354661 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 22)
+
+[node name="@Node3D@49029" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1302428720 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 22)
+
+[node name="@Node3D@49030" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1162789278 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 22)
+
+[node name="@Node3D@49031" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=531637305 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 0, 22)
+
+[node name="@Node3D@49032" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2102499540 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 22)
+
+[node name="@Node3D@49033" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1445678760 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 0, 22)
+
+[node name="@Node3D@49034" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1652532074 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 26)
+
+[node name="@Node3D@49035" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=928836193 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 26)
+
+[node name="@Node3D@49036" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2076146170 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 26)
+
+[node name="@Node3D@49037" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2139408495 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 38)
+
+[node name="@Node3D@49038" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=257028487 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 38)
+
+[node name="@Node3D@49039" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1960187404 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 38)
+
+[node name="@Node3D@49040" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=856709796 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 0, 38)
+
+[node name="@Node3D@49041" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1491081912 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 42)
+
+[node name="@Node3D@49042" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1509273395 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 42)
+
+[node name="@Node3D@49043" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1032307068 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 42)
+
+[node name="@Node3D@49044" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1799601530 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 42)
+
+[node name="@Node3D@49045" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1588624838 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 42)
+
+[node name="@Node3D@49046" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=4985576 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 0, 42)
+
+[node name="@Node3D@49047" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=730647492 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 0, 42)
+
+[node name="@Node3D@49048" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1399879778 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 46)
+
+[node name="@Node3D@49049" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=417636462 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, 46)
+
+[node name="@Node3D@49050" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1206007688 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 46)
+
+[node name="@Node3D@49051" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1243714703 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 46)
+
+[node name="@Node3D@49052" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=570258552 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 0, 46)
+
+[node name="@Node3D@49053" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=691383641 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 0, 46)
+
+[node name="@Node3D@49054" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1688861824 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 50)
+
+[node name="@Node3D@49055" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2027939054 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 50)
+
+[node name="@Node3D@49056" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=724587468 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 50)
+
+[node name="@Node3D@49057" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=687213507 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 54)
+
+[node name="@Node3D@49058" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=645724701 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 54)
+
+[node name="@Node3D@49059" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=757640887 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 58)
+
+[node name="@Node3D@49060" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1619782742 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 62)
+
+[node name="@Node3D@49061" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1440424993 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 62)
+
+[node name="@Node3D@49062" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1416240636 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 62)
+
+[node name="@Node3D@49063" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1405636395 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 62)
+
+[node name="@Node3D@49064" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=895742968 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 62)
+
+[node name="@Node3D@49065" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1439367747 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 66)
+
+[node name="@Node3D@49066" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1006034319 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 66)
+
+[node name="@Node3D@49067" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1367399107 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 66)
+
+[node name="@Node3D@49068" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1237416615 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 66)
+
+[node name="@Node3D@49069" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=897563424 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 70)
+
+[node name="@Node3D@49070" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1070125998 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 70)
+
+[node name="@Node3D@49071" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1247939532 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 74)
+
+[node name="@Node3D@49072" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=134315782 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 78)
+
+[node name="@Node3D@49073" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1965391913 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 78)
+
+[node name="@Node3D@49074" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1422352649 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 78)
+
+[node name="@Node3D@49075" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1153354301 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 78)
+
+[node name="@Node3D@49076" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1570629490 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 78)
+
+[node name="@Node3D@49077" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=495289454 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 78)
+
+[node name="@Node3D@49078" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=599220505 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 82)
+
+[node name="@Node3D@49079" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=625066261 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 82)
+
+[node name="@Node3D@49080" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2055353169 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 82)
+
+[node name="@Node3D@49081" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=921258653 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 82)
+
+[node name="@Node3D@49082" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1751377447 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 82)
+
+[node name="@Node3D@49083" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=764392313 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 86)
+
+[node name="@Node3D@49084" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1519941395 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 86)
+
+[node name="@Node3D@49085" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=584684231 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 86)
+
+[node name="@Node3D@49086" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=597024046 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, 86)
+
+[node name="@Node3D@49087" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=447097050 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 86)
+
+[node name="@Node3D@49088" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1079420251 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, 86)
+
+[node name="@Node3D@49089" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1280478117 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 86)
+
+[node name="@Node3D@49090" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1488916330 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 86)
+
+[node name="@Node3D@49091" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1944315520 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 86)
+
+[node name="@Node3D@49092" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=2001296126 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 90)
+
+[node name="@Node3D@49093" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1089891673 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 90)
+
+[node name="@Node3D@49094" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1836144482 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 90)
+
+[node name="@Node3D@49095" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=839791279 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 90)
+
+[node name="@Node3D@49096" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1080368774 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 0, 90)
+
+[node name="@Node3D@49097" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=514371203 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0, 94)
+
+[node name="@Node3D@49098" type="Node3D" parent="DungeonGenerator/Level_0" unique_id=1693777824 instance=ExtResource("5_ypsjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 94)

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dxbs4f8n73vqv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qvwta"]
+size = Vector3(4, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q7net"]
+size = Vector3(2, 1, 2)
+
+[node name="stairs" type="Node3D" unique_id=1647173104]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=977492454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+mesh = SubResource("BoxMesh_qvwta")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=415549496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -1)
+mesh = SubResource("BoxMesh_q7net")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=802338824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.5, -1)
+mesh = SubResource("BoxMesh_q7net")

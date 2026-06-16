@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c8fs4jahvnisc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0drea"]
+size = Vector3(0.5, 3, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0drea"]
+albedo_color = Color(0, 0.38212904, 0.36432603, 1)
+
+[node name="wall" type="Node3D" unique_id=500763770]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=395329674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_0drea")
+surface_material_override/0 = SubResource("StandardMaterial3D_0drea")
